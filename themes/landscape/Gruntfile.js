@@ -33,14 +33,14 @@ module.exports = function(grunt){
       fontawesome: ['source/css/fonts'],
       fancybox: ['source/fancybox']
     }
-  });
+  })
 
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
-  grunt.renameTask('clean', '_clean');
+  grunt.renameTask('clean', '_clean')
 
-  grunt.registerTask('fontawesome', ['gitclone:fontawesome', 'copy:fontawesome', '_clean:tmp']);
-  grunt.registerTask('fancybox', ['gitclone:fancybox', 'copy:fancybox', '_clean:tmp']);
-  grunt.registerTask('default', ['gitclone', 'copy', '_clean:tmp']);
-  grunt.registerTask('clean', ['_clean']);
-};
+  grunt.registerTask('fontawesome', ['gitclone:fontawesome', 'copy:fontawesome', '_clean:tmp'])
+  grunt.registerTask('fancybox', ['gitclone:fancybox', 'copy:fancybox', '_clean:tmp'])
+  grunt.registerTask('default', ['gitclone', 'copy', '_clean:tmp'])
+  grunt.registerTask('clean', ['_clean'])
+}
